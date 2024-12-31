@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="/static/sign up.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Create Account</h1>
+            <form method="POST" action="{{ url_for('signup') }}">
+                <input type="text" name="name" placeholder="&#128100; Name" required aria-label="Full Name">
+                <input type="email" name="email" placeholder="&#128231; Email" required aria-label="Email Address">
+                <input type="password" name="password" placeholder="&#x1F512; Password" required aria-label="Password">
+                <input type="submit" value="Sign Up">
+            </form>
+
+            <p>Already a user? <a href="{{ url_for('login') }}" class="underline">Login</a></p>
+
+            {% if error_message %}
+                <p style="color: red;">{{ error_message }}</p>
+            {% endif %}
+            {% if success_message %}
+                <p style="color: green;">{{ success_message }}</p>
+            {% endif %}
+        </div>
+        <div class="image-container">
+            <div class="overlay-text">Hello, Friend!</div>
+        </div>
+    </div>
+</body>
+</html>

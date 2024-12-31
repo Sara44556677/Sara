@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="/static/about_us.css"> 
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about_us') }}" class="active">About Us</a></li>
+            <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('turtle_gallery') }}">Turtle gallery</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>About Us</h1>
+    </header>
+
+    <section>
+        <h2>Welcome to My Project!</h2>
+        <p>Hi, my name is Sara. I am 13 years old, and I am in prep2. My goal is to be a programmer, and this is my profile.</p>
+    </section>
+
+    <section>
+        <h2>My Story</h2>
+        <p>It all started as a small idea, and then I decided to turn it into a real website. I researched a lot and took many courses to make this website. Even though I have many exams, I love programming.</p>
+    </section>
+
+    <section>
+        <h2>Meet the Team</h2>
+        <div class="card">
+            <img src="/static/20221021_163435.jpg" alt="Profile Picture" class="profile-img">
+            <h1>Sara Ramadan</h1>
+            <p>I am a student still learning programming, and this is my goal.</p>
+        </div>        
+    </section>
+
+    <section>
+        <h2>My Mission</h2>
+        <p>My mission is to become a real programmer and learn many things that will help me in the future. Becoming a programmer is my dream, so I am working hard. I made this website as practice to learn how to write code, how to link with other pages, and to learn HTML, CSS, and Python.</p>
+    </section>
+
+    <section>
+        <h2>Get Involved</h2>
+        <p>If you're passionate about what I am doing, I would love to hear from you! Share your feedback and let me know how I can improve this website.</p>
+    </section>
+
+    <section>
+        <h2>Conclusion</h2>
+        <p>I made this website to introduce myself then when you creat account and sign in you will be able to see my gallery of turtle images and its code so sign in to see it.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

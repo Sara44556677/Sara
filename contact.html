@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="/static/contact.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about_us') }}" class="active">About Us</a></li>
+            <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Contact me</h1>
+    </header>
+    <section>
+        <h2>Contact me</h2>
+        <p>Contact me by sending me a message</p>
+        <div class="message">
+            <h1>Message me</h1>
+            <form method="POST">
+                <input type="text" name="name" placeholder="&#128100; Name" required aria-label="Full Name">
+                <input type="email" name="email" placeholder="&#128231; Email" required aria-label="Email Address">
+                <textarea name="message" placeholder="📝 Write your message here" required aria-label="Message"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+            
+            {% if error_message %}
+                <p style="color: red;">{{ error_message }}</p>
+            {% endif %}
+            {% if success_message %}
+                <p style="color: green;">{{ success_message }}</p>
+            {% endif %}
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 My website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

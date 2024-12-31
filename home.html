@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="{{ url_for('home') }}" class="logo"><span>Sa</span>ra</a>
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}" class="active">Home</a>
+            <a href="{{ url_for('about_us') }}">About</a>
+            <a href="{{ url_for('signup') }}">Sign Up</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('turtle_gallery') }}">Turtle gallery</a>
+        </nav>
+        <a href="{{ url_for('contact') }}" class="contact">Contact</a>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h3>Hi,</h3><br>
+            <h1>I'm <span>Sara<br></span>a student at Udacity.</h1>
+            <p>Welcome to my Portfolio!</p>
+            <div class="btn-box">
+                <a href="{{ url_for('signup') }}" class="btn-1">Sign Up</a>
+                <a href="{{ url_for('login') }}" class="btn-2">Login</a>
+            </div>
+        </div>
+        <div class="img-box">
+            <img src="static/20221021_163435.jpg" alt="My image">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
